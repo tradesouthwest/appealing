@@ -293,7 +293,7 @@ function appeal_theme_header_style()
         if ( true === get_theme_mod( 'appeal_header_background_image_size_setting' ) ) : 
             $modsize = "background-size: 100% 100%;";
             else : 
-            $modsize = "background-size: auto";
+            $modsize = "background-size: cover";
         endif;
     ?>
     <?php   

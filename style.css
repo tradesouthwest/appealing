@@ -167,7 +167,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button;
+    
     cursor: pointer;
 }
 
@@ -203,7 +203,7 @@ input[type="search"] {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    -webkit-appearance: textfield;
+    
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -1405,7 +1405,7 @@ textarea.form-control {
 }
 
 input[type="search"] {
-    -webkit-appearance: none;
+    background-image: none;
 }
 
 .form-group {
@@ -4263,7 +4263,7 @@ button.list-group-item-danger.active:focus {
 }
 
 button.close {
-    -webkit-appearance: none;
+    
     padding: 0;
     cursor: pointer;
     background: transparent;
@@ -6370,7 +6370,7 @@ body.archive #main{
     display: inline-block;
     /* Next two lines make IE7 behave */
     zoom: 1;
-    *display: inline;
+    display: inline;
     /* Adjust width to the appropriate size for your theme */
     width: 100%;
     /* Presumably you want all the widgets to align-top */
