@@ -20,8 +20,8 @@
      * @string $hgroup
      */    
     if ( get_theme_mods( ) ) :
-    $titlelink = get_theme_mod( 'appeal_titlelink_color_setting', 'linkico-gray' );
-       $hgroup = get_theme_mod( 'appeal_title_visible_setting', 'atvt1' );
+    $titlelink = get_theme_mod( 'appealing_titlelink_color_setting', 'linkico-gray' );
+       $hgroup = get_theme_mod( 'appealing_title_visible_setting', 'atvt1' );
     endif;
 
     /**
@@ -94,7 +94,7 @@
 	    <p class="theauthor"><span class="screen-reader-text">
         <?php esc_html_e(
             'Author Gravatar is shown here. Clickable link to Author page.',
-            'appeal' ); ?></span>
+            'appealing' ); ?></span>
             
         <?php //only show modal on pages 
         if ( ! is_home() ) : ?>    
@@ -109,10 +109,10 @@
               echo wp_kses_post( $avatar ); ?>
 
         <span class="aspace"> &nbsp; </span> 
-        <em><?php esc_html_e( 'Article by: ', 'appeal' );
+        <em><?php esc_html_e( 'Article by: ', 'appealing' );
                   echo nl2br( get_the_author( ) ); ?></em>
         <span class="screen-reader-text">
-        <?php esc_html_e( 'Authors link to author website or other works.', 'appeal' ); ?>
+        <?php esc_html_e( 'Authors link to author website or other works.', 'appealing' ); ?>
         <?php echo esc_attr( get_the_author_meta( 'nicename' ) ); ?></span> </a></p>
         
             <div class="containbox alignright">

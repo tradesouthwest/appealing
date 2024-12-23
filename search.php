@@ -1,11 +1,16 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * Search page template
+ * @since 1.0.2
+ */
+get_header(); ?>
 
     <div id="content" class="row">
 
 	    <div id="main" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" role="main">
 
 		<?php if (have_posts()) : ?>
-        <h2><?php esc_html_e( 'Search Results for: ', 'appeal' ); echo esc_html( get_search_query() ); ?></h2>
+        <h2><?php esc_html_e( 'Search Results for: ', 'appealing' ); echo esc_html( get_search_query() ); ?></h2>
              
             <?php  while ( have_posts() ) : the_post(); ?>
         
@@ -20,7 +25,7 @@
                     <footer class="meta-footer">
                       <a href="<?php echo esc_url( get_permalink() ); ?>" 
                             title="<?php the_title_attribute(); ?>"> 
-                      <?php esc_attr_e( 'View Article...', 'appeal' ); ?></a>
+                      <?php esc_attr_e( 'View Article...', 'appealing' ); ?></a>
                       <time class="alignright" 
                             datetime="<?php the_time( get_option( 'date_format' )); ?>"
                             itemprop="datePublished" pubdate 
@@ -42,7 +47,7 @@
                     <?php get_template_part( 'nav', 'content' ); ?>
 
             <aside class="post_content">
-            <h4><?php esc_html_e( 'Search Results End', 'appeal' ); ?></h4>
+            <h4><?php esc_html_e( 'Search Results End', 'appealing' ); ?></h4>
 				    
 
 			</aside>

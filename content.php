@@ -6,7 +6,7 @@
  * Attachment and thumbnail use custom 400x300px but adjust
  * display size according to orientation, down to 180x180
  * @4x3 standard computer media ratio - (not 16:9)
- * @180x180px thumbnail squared = `appeal-thumbnail`
+ * @180x180px thumbnail squared = `appealing-thumbnail`
  * @since 1.0.7 Modal section moved to bottom.
  *
  */
@@ -26,7 +26,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
 // Default if-homepage is blog. Has thumb in excerpt
 ?>
 
-            <div class="post_content appeal_blog">
+            <div class="post_content appealing_blog">
 
                 <?php get_template_part('content', 'header' ); ?>
 
@@ -37,25 +37,25 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                         <div class="col-xs-3 col-sm-3 col-lg-4">
 
                         <?php // Check which Post Thumbnail is assigned to post.
-                        if ( has_post_thumbnail( 'appeal-thumbnail' ) ) { ?>
-                        <?php printf( '<a class="appeal-imglink"
+                        if ( has_post_thumbnail( 'appealing-thumbnail' ) ) { ?>
+                        <?php printf( '<a class="appealing-imglink"
                               href="' . esc_url( get_permalink( $post->ID  ) ) . '"
                               title ="' . esc_attr( get_the_title( $post->ID ) ) . '">' 
                               ); ?>
-                        <?php the_post_thumbnail( 'appeal-featured', array( 
+                        <?php the_post_thumbnail( 'appealing-featured', array( 
                               'itemprop' => 'image', 
-                              'class' => 'img-responsive appeal-thumbnail',
+                              'class' => 'img-responsive appealing-thumbnail',
                               'alt' => $alts  ) ); ?></a><div class="clearfix"></div>
                         <?php } else {
                             // ends if has custom thumb size
                             ?>
-                            <?php printf( '<a class="appeal-imglink"
+                            <?php printf( '<a class="appealing-imglink"
                                   href="' . esc_url( get_permalink( $post->ID ) ) . '"
                                   title ="' . esc_attr( get_the_title( $post->ID ) ) . '">' 
                                   ); ?>
                             <?php the_post_thumbnail('thumbnail', array( 
                                   'itemprop' => 'image', 
-                                  'class' => 'img-responsive appeal-thumbnail',
+                                  'class' => 'img-responsive appealing-thumbnail',
                                   'alt' => $alts ) ); ?></a><div class="clearfix"></div>
                             <?php }
                             //ends if has wp_thumbnail
@@ -114,7 +114,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
  */
 ?>
 
-        <section id="appeal-content" class="post_content">
+        <section id="appealing-content" class="post_content">
 
 		    <?php get_template_part('content', 'header' ); ?>
 
@@ -129,19 +129,19 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                         get_post_thumbnail_id())->post_excerpt;
                         
                     // check which Post Thumbnail is assigned to page.
-                    if ( has_post_thumbnail( 'appeal-thumbnail' ) ) { 
-                    //SHOW APPEAL THUMB
+                    if ( has_post_thumbnail( 'appealing-thumbnail' ) ) { 
+                    //SHOW appealing THUMB
                     ?>
 
                         <div class="col-xs-6 col-sm-6 col-lg-7">
-                        <a class="appeal-imglinks"
+                        <a class="appealing-imglinks"
                            href="<?php echo esc_url( get_attachment_link( 
                            get_post_thumbnail_id() ) ); ?>" 
                            <?php if( !empty ( $get_description ) ) { ?>
                            title="<?php echo esc_attr( $get_description ); ?>"<?php } ?>>
-                        <?php the_post_thumbnail( 'appeal-featured', array( 
+                        <?php the_post_thumbnail( 'appealing-featured', array( 
                                                   'itemprop' => 'image', 
-                                                  'class' => 'img-responsive appeal-thumbnail',
+                                                  'class' => 'img-responsive appealing-thumbnail',
                                                   'alt' => $alts ) ); ?></a>
                           <?php if( !empty( $get_description ) ) 
                           {
@@ -162,14 +162,14 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                     ?>
 
                         <div class="col-xs-6 col-sm-6 col-lg-7">
-                        <a class="appeal-imglinks"
+                        <a class="appealing-imglinks"
                            href="<?php echo esc_url( get_attachment_link( 
                            get_post_thumbnail_id() ) ); ?>" 
                            <?php if( !empty ( $get_description ) ) { ?>
                            title="<?php echo esc_attr( $get_description ); ?>"<?php } ?>>
                         <?php the_post_thumbnail('thumbnail', array( 
                                                 'itemprop' => 'image', 
-                                                'class' => 'img-responsive appeal-thumbnail',
+                                                'class' => 'img-responsive appealing-thumbnail',
                                                 'alt' => $alts ) ); ?></a>
                         <?php if(!empty($get_description)){
                               //If description-caption is not empty show the div
@@ -192,7 +192,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                     <?php 
                     // Check if theme mod Pullquote uusage is activated.
                     $theme_modEx = get_theme_mod( 
-                    'appeal_custom_teaser_usage_setting', 'none' ); 
+                    'appealing_custom_teaser_usage_setting', 'none' ); 
                     if( $theme_modEx == "block" ) 
                     : 
                     ?>
@@ -213,7 +213,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                     ?>
 
                 </div>
-                    <div class="<?php echo esc_attr( appeal_post_formats() ); ?>">
+                    <div class="<?php echo esc_attr( appealing_post_formats() ); ?>">
                         <div class="inner_content">
 
                             <?php the_content(''); ?>
@@ -224,7 +224,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
 
 		      <?php wp_link_pages( array(
                                      'before' => '<p class="nextpage-pagination">'
-                                    . __( 'Pages : ', 'appeal' ),
+                                    . __( 'Pages : ', 'appealing' ),
                                     'after' => '</p>',
                                     'link_before' => '<span class="space">',
                                     'link_after' => '<span class="space">',
@@ -258,7 +258,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
 
 
 
-    <section id="appeal-content" class="post_content">
+    <section id="appealing-content" class="post_content">
 
     	<?php get_template_part('content', 'header' ); ?>
 
@@ -266,7 +266,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
             <div class="after-content-header">
     <?php 
     // Check if theme mod Pullquote uusage is activated.
-    $theme_modEx = get_theme_mod( 'appeal_custom_teaser_usage_setting', 'none' ); 
+    $theme_modEx = get_theme_mod( 'appealing_custom_teaser_usage_setting', 'none' ); 
         if( $theme_modEx == "block" ) 
         { 
         ?>
@@ -276,17 +276,17 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
             ?>
                 <?php 
                 // Check which Post Thumbnail is assigned to page.
-                if ( has_post_thumbnail( 'appeal-thumbnail' ) ) 
+                if ( has_post_thumbnail( 'appealing-thumbnail' ) ) 
                 { 
                 ?>
 
                 <div class="col-xs-6 col-sm-6 col-lg-7">
-                <a class="appeal-imglinks"
+                <a class="appealing-imglinks"
                    href="<?php echo esc_url( get_attachment_link( 
                    get_post_thumbnail_id() ) ); ?>">
-                <?php the_post_thumbnail( 'appeal-featured', array( 
+                <?php the_post_thumbnail( 'appealing-featured', array( 
                                           'itemprop' => 'image', 
-                                          'class' => 'img-responsive appeal-thumbnail',
+                                          'class' => 'img-responsive appealing-thumbnail',
                                           'alt' => $alts ) ); ?></a>
                 </div>
 
@@ -295,12 +295,12 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                     { ?>
 
                     <div class="col-xs-6 col-sm-6 col-lg-7">
-                    <a class="appeal-imglinks"
+                    <a class="appealing-imglinks"
                        href="<?php echo esc_url( get_attachment_link( 
                        get_post_thumbnail_id() ) ); ?>">
                     <?php the_post_thumbnail( 'thumbnail', array( 
                                               'itemprop' => 'image', 
-                                              'class' => 'img-responsive appeal-thumbnail',
+                                              'class' => 'img-responsive appealing-thumbnail',
                                               'alt' => $alts ) ); ?></a>
                     </div>
                     <?php 
@@ -336,17 +336,17 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
         ?>
             <?php 
             // check which Post Thumbnail is assigned to page.
-            if ( has_post_thumbnail( 'appeal-thumbnail' ) ) 
+            if ( has_post_thumbnail( 'appealing-thumbnail' ) ) 
             { 
             ?>
                         
             <div class="col-sm-12">
-                <a class="appeal-imglinks"
+                <a class="appealing-imglinks"
                    href="<?php echo esc_url( get_attachment_link( 
                    get_post_thumbnail_id() ) ); ?>">
-                <?php the_post_thumbnail( 'appeal-featured', array( 
+                <?php the_post_thumbnail( 'appealing-featured', array( 
                                           'itemprop' => 'image', 
-                                          'class' => 'img-responsive appeal-thumbnail',
+                                          'class' => 'img-responsive appealing-thumbnail',
                                           'alt' => $alts ) ); ?></a>
             </div>
 
@@ -355,12 +355,12 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                 { ?>
 
                 <div class="col-sm-12">
-                <a class="appeal-imglinks"
+                <a class="appealing-imglinks"
                    href="<?php echo esc_url( get_attachment_link( 
                    get_post_thumbnail_id() ) ); ?>">
                 <?php the_post_thumbnail( 'thumbnail', array( 
                                           'itemprop' => 'image', 
-                                          'class' => 'img-responsive appeal-thumbnail',
+                                          'class' => 'img-responsive appealing-thumbnail',
                                           'alt' => $alts ) ); ?></a>
                 </div>
                 <?php 
@@ -386,7 +386,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
 
 		            <?php wp_link_pages( array(
                                     'before' => '<p class="nextpage-pagination">'
-                                    . __( 'Pages : ', 'appeal' ),
+                                    . __( 'Pages : ', 'appealing' ),
                                     'after' => '</p>',
                                     'link_before' => '<span class="space">',
                                     'link_after' => '<span class="space">',
@@ -402,7 +402,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
     </section><div class="clearfix"></div> 
                 <footer class="meta-footer">
                     <ul class="metas list-inline">
-                        <li><?php edit_post_link(__( 'Edit', "appeal"), ' '); ?></li>
+                        <li><?php edit_post_link(__( 'Edit', "appealing"), ' '); ?></li>
                     </ul>
                 </footer>
 
@@ -426,7 +426,7 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                         if ( has_post_thumbnail() ) {
     	                     the_post_thumbnail( 'thumbnail', array( 
                                                  'itemprop' => 'image', 
-                                                 'class' => 'appeal-thumbnail alignleft',
+                                                 'class' => 'appealing-thumbnail alignleft',
                                                  'alt' => '' ) );
                         } else {
                     	   echo '<div class="no-thumb"></div>'; }
@@ -476,11 +476,11 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
           <?php echo esc_attr( nl2br( get_the_author_meta( 'last_name' ) ) ); ?>
           <span class="screen-reader-text">
           <?php esc_attr_e( 'Information about the author you selected',
-                            'appeal' ); ?></span>
+                            'appealing' ); ?></span>
         </h2>
       </div>
       <div class="modal-body">
-        <p><?php esc_html_e( 'Author:  ', 'appeal' );
+        <p><?php esc_html_e( 'Author:  ', 'appealing' );
                  echo esc_attr(get_the_author_meta( 'nicename' )); ?></p>
         <ul class="list-group">
 
@@ -492,32 +492,32 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                  title="<?php the_author(); ?>">
               <?php echo esc_url(the_author_meta( 'url' ) ); ?>
               <span class="screen-reader-text">
-              <?php esc_html_e( 'link to author', 'appeal' ); ?>
+              <?php esc_html_e( 'link to author', 'appealing' ); ?>
               <?php echo esc_url(the_author_meta( 'url' ) ); ?></span></a></li>
 
             <li class="list-group-item"><?php
                 esc_html_e( 'Author Page and Archives for ',
-                            'appeal' ); the_author_posts_link(); ?></li>
+                            'appealing' ); the_author_posts_link(); ?></li>
             <li class="list-group-item"><b><?php the_author_posts(); ?></b>
               <span class="screen-reader-text">
               <?php esc_html_e( 'Number of articles by this author, ',
-                                'appeal'); ?>
+                                'appealing'); ?>
               <?php the_author_posts(); ?></span>
-            <?php esc_html_e( 'Articles by ', 'appeal' ); ?> <?php the_author(); ?></li>
+            <?php esc_html_e( 'Articles by ', 'appealing' ); ?> <?php the_author(); ?></li>
 
         </ul>
       </div>
       <div class="modal-footer">
         <nav class="modal-nav">
-            <em class="text-muted"><?php esc_html_e( 'E-Mail: ', 'appeal' ); ?>
+            <em class="text-muted"><?php esc_html_e( 'E-Mail: ', 'appealing' ); ?>
             <?php echo esc_html( the_author_meta('user_email') ); ?></em>
             <span class="screen-reader-text">
-            <?php esc_html_e( 'email link text to author', 'appeal' ); ?></span>
+            <?php esc_html_e( 'email link text to author', 'appealing' ); ?></span>
             <button type="button"
                     class="btn btn-default btn-md"
                     data-dismiss="modal"
-                    title="<?php esc_attr_e( 'Close', 'appeal' ); ?>">
-                           <?php esc_html_e( 'Close', 'appeal' ); ?>
+                    title="<?php esc_attr_e( 'Close', 'appealing' ); ?>">
+                           <?php esc_html_e( 'Close', 'appealing' ); ?>
             </button>
         </nav>
       </div>

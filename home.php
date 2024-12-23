@@ -1,8 +1,8 @@
 <?php
 /**
  * home page if blog/posts set as home page
- * @package: Appeal
- * @filename: page-three-width copy
+ * @package: appealing
+ * @filename: page-three-width copy 
 */
 ?>
 <?php get_header(); ?>
@@ -11,12 +11,12 @@
     <div class="side-abtn">
     
         <?php //option for reveal sidebar button 
-        $offscreen_text = get_option( 'appeal_sidebar_text_setting', ' + ' ); 
+        $offscreen_text = get_option( 'appealing_sidebar_text_setting', ' + ' ); 
         ?>
     
     <a class="btn btn-default btn-lg" 
        href="#sideA" 
-       title="<?php esc_attr_e( 'show sidebars and navaigation options', 'appeal' ); ?>">
+       title="<?php esc_attr_e( 'show sidebars and navaigation options', 'appealing' ); ?>">
        <?php echo esc_html( $offscreen_text ); ?></a>
     </div>
        
@@ -49,7 +49,6 @@
             <?php get_sidebar( 'right' ); ?>
 
         </div>
-
 
 </div>
 

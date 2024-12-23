@@ -1,5 +1,8 @@
 <?php
-// attachment page for theme Appeal
+/**
+ * Attachment page for theme Appealing
+ * @since 1.0.2
+ */ 
 get_header(); ?>
 
     <div id="content" class="row">
@@ -24,8 +27,8 @@ get_header(); ?>
 
                         <?php else : ?>
 
-                        <a href="<?php echo esc_url(wp_get_attachment_url($post->ID)) ?>"
-                           title="<?php echo esc_attr(get_the_title($post->ID), 1 ) ?>"
+                        <a href="<?php echo esc_url( wp_get_attachment_url($post->ID) ) ?>"
+                           title="<?php echo esc_attr( get_the_title($post->ID), 1 ) ?>"
                            rel="attachment"><?php printf( esc_url( basename($post->guid) ) ); ?></a>
 
                     <?php endif; ?>

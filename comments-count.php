@@ -7,18 +7,18 @@ if ( is_front_page() && is_home() || is_home() ) :
 				if ( 1 === $comments_number ) {
 					printf(
 						/* translators: %s: post title */
-						esc_html_x( '1 Response to &ldquo;%s&rdquo;', 'comments title', 'appeal' ),
+						esc_html_x( '1 Response to &ldquo;%s&rdquo;', 'comments title', 'appealing' ),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else { 
-					printf( // WPCS: XSS OK.
+					printf( 
 						/* translators: 1: number of comments, 2: post title */
 						esc_html( _nx(
 							'%1$s Response to &ldquo;%2$s&rdquo;',
 							'%1$s Responses to &ldquo;%2$s&rdquo;',
 							$comments_number,
 							'comments title',
-							'appeal'
+							'appealing'
 						) ),
 						number_format_i18n( $comments_number ),
 						'<span>' . get_the_title() . '</span>'
@@ -30,17 +30,17 @@ else :
 				if ( 1 === $comments_number ) {
 					printf(
 						/* translators: %s: post title */
-						esc_html_e( '1 Response', 'appeal' )
+						esc_html_e( '1 Response', 'appealing' )
 					);
 				} else { 
-					printf( // WPCS: XSS OK.
+					printf( 
 						/* translators: 1: number of comments, 2: post title */
 						esc_html( _nx(
 							'%1$s Response',
 							'%1$s Responses',
 							$comments_number,
 							'comments title',
-							'appeal'
+							'appealing'
 						) ),
 						number_format_i18n( $comments_number )
 					);

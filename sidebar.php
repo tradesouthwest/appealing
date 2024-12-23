@@ -7,5 +7,5 @@
     
     </div>
     <p><a href="#" title="^" class="btn btn-default align-xs-auto">
-    <?php esc_attr_e("Top/Pg.", "appeal"); ?></a></p>
+    <?php esc_attr_e( "Top/Pg.", "appealing" ); ?></a></p>
 </div>

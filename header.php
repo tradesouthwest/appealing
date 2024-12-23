@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" href="#content">
-<?php esc_attr_e( 'Skip to content', 'appeal' ); ?></a>
+<?php esc_attr_e( 'Skip to content', 'appealing' ); ?></a>
 <?php if ( function_exists( 'wp_body_open' ) ) {wp_body_open(); } else { do_action( 'wp_body_open' ); } ?>
 <div id="content-wrapper">
     <div class="site-head">
@@ -18,7 +18,7 @@
             <a title="<?php bloginfo('description'); ?>"
                href="<?php echo esc_url(home_url('/')); ?>">
             <?php echo wp_kses_post( force_balance_tags( 
-            appeal_theme_custom_logo() ) ); ?></a>
+            appealing_theme_custom_logo() ) ); ?></a>
             <?php endif; ?>
         
             <p class="list-inline header-has-text">
@@ -43,7 +43,7 @@
 						<button type="button" class="navbar-toggle collapsed"
                                 data-toggle="collapse"
                                 data-target="#navbar-responsive-collapse">
-		    				<span class="sr-only"><?php esc_html_e('Navigation', 'appeal'); ?></span>
+		    				<span class="sr-only"><?php esc_html_e('Navigation', 'appealing'); ?></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -61,7 +61,7 @@
                 'container_id'  => 'navbar-collapse-top',
                 'menu_class'   => 'nav navbar-nav',
                 'fallback_cb' => 'wp_nav_menus',
-                'walker'     =>  new appeal_bootstrap_navwalker()
+                'walker'     =>  new appealing_bootstrap_navwalker()
             )); ?>
 
 					</div>

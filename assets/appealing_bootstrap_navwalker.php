@@ -10,7 +10,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-class appeal_bootstrap_navwalker extends Walker_Nav_Menu {
+class appealing_bootstrap_navwalker extends Walker_Nav_Menu {
 
 	/**
 	 * @see Walker::start_lvl()
@@ -91,13 +91,13 @@ if ( $args->has_children && $depth === 0 ) {
    $atts['href'] = ! empty( $item->url ) ? $item->url : '';
 }
 /** 
- * theme_mod in theme Appeal 
+ * theme_mod in theme appealing 
  */
  
     if( get_theme_mods() ) : 
-        if ( get_theme_mod( 'appeal_nav_walker_mobi_setting', 0 ) ) : 
-            $appealmobi = get_theme_mod( 'appeal_nav_walker_mobi_setting');
-            if ( $appealmobi == 1 ) { 
+        if ( get_theme_mod( 'appealing_nav_walker_mobi_setting', 0 ) ) : 
+            $appealingmobi = get_theme_mod( 'appealing_nav_walker_mobi_setting');
+            if ( $appealingmobi == 1 ) { 
  
 			// If item has_children add atts to a.
  
@@ -111,12 +111,12 @@ if ( $args->has_children && $depth === 0 ) {
 			}
             //ends nav_walker commented out
 
- } else { 
- //no mobile 
- } 
- endif;
- 
- endif;
+			} else { 
+ 				//no mobile 
+				return false;
+ 			} 
+ 		endif;
+ 	endif;
 			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 
 			$attributes = '';
@@ -196,7 +196,7 @@ if ( $args->has_children && $depth === 0 ) {
 	public static function fallback( $args ) {
 		if ( current_user_can( 'manage_options' ) ) {
 
-			extract( $args );
+			extract( $args );            // phpcs:ignore WordPress.PHP.DontExtract.extract_extract
 
 			$fb_output = null;
 
@@ -227,7 +227,7 @@ if ( $args->has_children && $depth === 0 ) {
 			if ( $container )
 				$fb_output .= '</' . $container . '>';
 
-			echo $fb_output;
+			echo $fb_output;                        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 	}
 }

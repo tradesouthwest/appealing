@@ -1,4 +1,7 @@
-
+<?php
+/**
+ * Navigation content
+ */
     <?php if (get_next_posts_link() || get_previous_posts_link()) { ?>
     <div class="postlink">
         <nav class="block" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
@@ -10,7 +13,7 @@
                 <li class="btn btn-paging notblank previous">
             
                     <?php next_posts_link("&laquo; "
-                          . __('Older posts', "appeal")); ?></li>
+                          . __('Older posts', "appealing")); ?></li>
             <?php } ?>
             
                 <li></li>
@@ -22,7 +25,7 @@
                 <li class="btn btn-paging notblank next">
             
                     <?php previous_posts_link(
-                          __('Newer posts', "appeal") . " &raquo;"); ?></li>
+                          __('Newer posts', "appealing") . " &raquo;"); ?></li>
                 <?php } ?>
             
             </ul>
@@ -37,15 +40,15 @@
 <?php
 the_post_navigation( array(
 	'prev_text' => '<span class="screen-reader-text">'
-    . __( 'Previous Post', 'appeal' )
+    . __( 'Previous Post', 'appealing' )
     . '</span><span aria-hidden="true" class="nav-subtitle">'
-    . __( '&laquo; Previous: ', 'appeal' ) . '</span>
+    . __( '&laquo; Previous: ', 'appealing' ) . '</span>
     <span class="nav-pills">%title</span>',
 
     'next_text' => '<span class="screen-reader-text">'
-    . __( 'Next Post', 'appeal' ) . '</span>
+    . __( 'Next Post', 'appealing' ) . '</span>
     <span aria-hidden="true" class="nav-subtitle">'
-    . __( 'Next: ', 'appeal' ) . '</span>
+    . __( 'Next: ', 'appealing' ) . '</span>
     <span class="nav-pills">%title</span><span class="nav-subtitle"> &raquo;</span>',
 	) );
 ?>

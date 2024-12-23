@@ -76,20 +76,20 @@
                         <nav class="text-center copyright">
 
                             <div class="col-sx-12 col-md-4">
-                                <p><?php esc_html_e('Theme by ', 'appeal' ); ?>
+                                <p><?php esc_html_e('Theme by ', 'appealing' ); ?>
                                 <span title="tradesouthwest.com"> TSW=|=</span></p>
                             </div>
 
                             <div class="col-sx-12 col-md-4">
                             <?php  if ( get_theme_mods() ) { 
-                            $appeal_copyright = get_theme_mod( 'appeal_copyright_text_setting' );
-                            if( $appeal_copyright != '' ) { ?><p><?php 
-                            echo esc_html( $appeal_copyright ); ?></p>
+                            $appealing_copyright = get_theme_mod( 'appealing_copyright_text_setting' );
+                            if( $appealing_copyright != '' ) { ?><p><?php 
+                            echo esc_html( $appealing_copyright ); ?></p>
                             <?php } else { ?>
                                 <p class="text-muted"><?php
-                                $year  = date_i18n(__( 'Y', 'appeal' ));
-                                esc_html_e( 'Copyright ', 'appeal' ); 
-                                echo esc_attr( ' ' . $year . ' ' );
+                                $yer  = date_i18n(__( 'Y', 'appealing' ));
+                                esc_html_e( 'Copyright ', 'appealing' ); 
+                                echo esc_attr( ' ' . $yer . ' ' );
                                 printf( esc_attr( bloginfo( 'name' ) ) ); ?></p>
                             <?php } } ?>    
                             </div>
@@ -98,7 +98,7 @@
                                 <p><a href="#"
                                       title="^"
                                       class="btn btn-default">
-                                      <?php esc_attr_e("Top/Pg.", "appeal"); ?></a></p>
+                                      <?php esc_attr_e("Top/Pg.", "appealing"); ?></a></p>
                             </div>
 
                         </nav>

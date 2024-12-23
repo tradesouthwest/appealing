@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * Archive hierarchy template
+ * @since 1.0.2
+ */
+get_header(); ?>
 
     <div id="content" class="row">
 
@@ -13,29 +18,29 @@
 						<?php the_archive_title( '', false ); ?>
 
 					<?php elseif ( is_author() ) : ?>
-						<?php esc_html_e( 'Author Archive for ', 'appeal' ); ?>
+						<?php esc_html_e( 'Author Archive for ', 'appealing' ); ?>
 						<span class="text-note"> 
                             <?php printf( esc_attr( get_the_author_meta( 
                                       'display_name', get_query_var( 'author' ) ) ) 
                                     ); ?></span>
 
 					<?php elseif ( is_tag() ) : ?>
-						<?php echo esc_html_e( 'Tag Archive for ', 'appeal' ); ?>
+						<?php echo esc_html_e( 'Tag Archive for ', 'appealing' ); ?>
 						<span class="text-note"> 
                         <?php the_archive_title( ); ?></span>
 
 					<?php elseif ( is_day() ) : ?>
-						<?php echo esc_html_e( 'Dated Archives: ', 'appeal' ); ?>
+						<?php echo esc_html_e( 'Dated Archives: ', 'appealing' ); ?>
 						<span class="text-note"> 
                             <?php printf( esc_attr( get_the_date() ) ); ?></span>
 
 					<?php elseif ( is_month() ) : ?>
-						<?php echo esc_html_e( 'Monthly Archives: ', 'appeal' ); ?>
+						<?php echo esc_html_e( 'Monthly Archives: ', 'appealing' ); ?>
 						<span class="text-note"> 
                             <?php printf( esc_attr( get_the_date( 'F Y' ) ) ); ?></span>
 
 					<?php elseif ( is_year() ) : ?>
-						<?php echo esc_html_e( 'Yearly Archives: ', 'appeal' ); ?>
+						<?php echo esc_html_e( 'Yearly Archives: ', 'appealing' ); ?>
 						<span class="text-note"> 
                             <?php printf( esc_attr( get_the_date( 'Y' ) ) ); ?></span>
 
@@ -70,7 +75,7 @@
                     
                          <a href="<?php echo esc_url( get_permalink() ); ?>" 
                             title="<?php the_title_attribute(); ?>"> 
-                      <?php esc_attr_e( 'View Article...', 'appeal' ); ?></a>
+                      <?php esc_attr_e( 'View Article...', 'appealing' ); ?></a>
                 </div><!-- ends entry-content -->   
                     <footer class="meta-footer archive-footer">
 

@@ -16,7 +16,7 @@
     }   // Stop here (don't need tags and edit on home blog)
         elseif ( is_single() )
         { ?> 
-        <li><?php edit_post_link(__( 'Edit', "appeal"), ' '); ?></li>
+        <li><?php edit_post_link( __( 'Edit', "appealing" ), ' '); ?></li>
     </ul>
         <ul class="list-unstyled">
           <li class="tagcats"><?php the_tags('<p class="tags">', ' ', '</p>'); ?></li>
@@ -30,9 +30,9 @@
             <li><?php
             $dsp = '<span class="comment-icon"> &#9776; </span> ';
             comments_popup_link(
-            $dsp . __( 'Leave a comment', "appeal"),
-            $dsp . __( '1 Comment', "appeal"),
-            $dsp . __( '% Comments', "appeal")); ?></li>
+            $dsp . __( 'Leave a comment', "appealing" ),
+            $dsp . __( '1 Comment', "appealing" ),
+            $dsp . __( '% Comments', "appealing" )); ?></li>
             </ul>
             <?php 
             } ?>
@@ -42,12 +42,12 @@
         }   elseif ( is_page() ) 
             {
         ?>
-        <li><?php edit_post_link(__( 'Edit', "appeal"), ' '); ?></li></ul>
+        <li><?php edit_post_link( __( 'Edit', "appealing"), ' ' ); ?></li></ul>
             <?php 
             // everything else (attachments etc)
             } else {
             ?>
-     <li><?php edit_post_link(__( 'Edit', "appeal"), ' '); ?></li></ul>
+     <li><?php edit_post_link( __( 'Edit', "appealing"), ' ' ); ?></li></ul>
     
 
 
