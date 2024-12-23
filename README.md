@@ -1,3 +1,5 @@
+![Appealing banner](assets/banner-1544x500.png)
+
 # Appealing
 The name says it all. An appealing theme made for ClassicPress.
 
