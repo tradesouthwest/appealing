@@ -20,7 +20,7 @@ if ( is_front_page() && is_home() || is_home() ) :
 							'comments title',
 							'appealing'
 						) ),
-						number_format_i18n( esc_attr( $comments_number ) ),
+						esc_attr( number_format_i18n( $comments_number ) ),
 						'<span>' . esc_html( get_the_title() ) . '</span>'
 					);
 				}
@@ -42,7 +42,7 @@ else :
 							'comments title',
 							'appealing'
 						) ),
-							number_format_i18n( esc_attr( $comments_number ) )
+						esc_attr( number_format_i18n( $comments_number ) )
 					);
 				}
 endif;
