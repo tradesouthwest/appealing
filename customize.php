@@ -1,6 +1,6 @@
 <?php
     /**
-     * customizer assets - appealing
+     * Customizer assets - Appealing
 	 * Header Background Color setting
 	 *
 	 * Uses a color wheel to configure the Header Background Color setting.
@@ -547,5 +547,3 @@ function appealing_custom_posts_excerpt_length()
     endif;
 }
 add_filter( 'excerpt_length', 'appealing_custom_posts_excerpt_length' );
-
-?>

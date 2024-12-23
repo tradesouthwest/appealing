@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Top Advert Template
- * @theme Appeal
+ * @theme Appealing
  */
 get_header(); ?>
 

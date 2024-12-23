@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 /* ------------------------------------------------------------------------ *
- * Setting Registration for theme appealing
+ * Setting Registration for theme Appealing
  * ------------------------------------------------------------------------ */
 
 /**

@@ -250,7 +250,8 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                     
                     
 
-<?php } elseif ( is_page() )  { 
+<?php 
+} elseif ( is_page() )  { 
 /**
  * Page template page default
  */
@@ -316,8 +317,8 @@ $alts = esc_attr( get_the_title( $post->ID  ) );
                     <div class="pullquote">
                         <aside>
                         <?php  
-                         $page = get_post();
-                         $the_excerpt = $page->post_excerpt;          
+                         $pagg = get_post();
+                         $the_excerpt = $pagg->post_excerpt;          
                          echo esc_html( $the_excerpt );  
                         ?> 
                         </aside>

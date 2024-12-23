@@ -1,5 +1,5 @@
 # Appealing
-The name says it all. An appealing them made for ClassicPress.
+The name says it all. An appealing theme made for ClassicPress.
 
 - Requires PHP: 7.4
 - Requires CP:  1.4

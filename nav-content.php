@@ -1,8 +1,8 @@
 <?php
 /**
  * Navigation content
- */
-    <?php if (get_next_posts_link() || get_previous_posts_link()) { ?>
+ */ ?>
+    <?php if ( get_next_posts_link() || get_previous_posts_link() ) { ?>
     <div class="postlink">
         <nav class="block" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
             <ul class="list-inline">

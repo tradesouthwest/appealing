@@ -12,7 +12,7 @@ get_header(); ?>
 		<?php if (have_posts()) : ?>
         <h2><?php esc_html_e( 'Search Results for: ', 'appealing' ); echo esc_html( get_search_query() ); ?></h2>
              
-            <?php  while ( have_posts() ) : the_post(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
         
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h4 class="entry-title"><a href="<?php the_permalink() ?>"
@@ -29,8 +29,7 @@ get_header(); ?>
                       <time class="alignright" 
                             datetime="<?php the_time( get_option( 'date_format' )); ?>"
                             itemprop="datePublished" pubdate 
-                            class="thedate"><em><?php echo sanitize_text_field( 
-                            the_date() ); ?></em>
+                            class="thedate"><em><?php echo esc_attr( the_date() ); ?></em>
                       </time> 
                         <div class="clearfix"></div>      
                     </footer>

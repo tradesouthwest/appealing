@@ -5671,7 +5671,7 @@ body {
     margin-bottom: 0;
     overflow-x: hidden;
 }
-.appeal-content-woocommerce{
+.appealing-content-woocommerce{
     background: inherit;
 }
 /* uncomment this to push theme to edges */
@@ -5989,7 +5989,7 @@ header.content-header:after {
 }
 
 @media all and (max-width: 480px) {
-    .appeal-thumbnail {
+    .appealing-thumbnail {
         max-height: 67vh;
     }
 }
@@ -6006,18 +6006,18 @@ header.content-header:after {
     }
 }
 
-#appeal-content .after-content-header col-xs-6 {
+#appealing-content .after-content-header col-xs-6 {
     padding: 0;
     min-height: 72px;
     height: 100%;
 }
 
-.appeal_blog .after-content-header .col-xs-3 {
+.appealing_blog .after-content-header .col-xs-3 {
     min-height: 100px;
     height: 100%;
 }
 
-a.appeal-imglinks {
+a.appealing-imglinks {
     padding-left: 0;
     padding-top: 8px;
     display: block;
@@ -6026,19 +6026,19 @@ a.appeal-imglinks {
     left: -2px;
 }
 
-.appeal_blog .after-content-header .col-xs-3 a.appeal-imglink {
+.appealing_blog .after-content-header .col-xs-3 a.appealing-imglink {
     padding-left: 0;
     padding-top: 17px;
     display: block;
     min-height: 1px;
 }
 
-img.wp-post-image.appeal-thumbnail {
+img.wp-post-image.appealing-thumbnail {
     margin: 0 auto;
 }
 
-img.wp-post-image.appeal-thumbnail,
-.entry-content a.appeal-imglinks img {
+img.wp-post-image.appealing-thumbnail,
+.entry-content a.appealing-imglinks img {
     max-height: 320px;
     width: auto; 
 }
@@ -6318,7 +6318,7 @@ header.content-header {
     position: relative;
 }
 
-body.home.page-template a.appeal-imglinks img {
+body.home.page-template a.appealing-imglinks img {
     position: relative;
     max-height: 320px;
     width: auto;
@@ -6810,7 +6810,7 @@ body.home .thedate {
     margin-left: 2px;
 }
 
-.appeal-thumbnail {
+.appealing-thumbnail {
     border: thin solid #eee;
     border-radius: 2px;
     margin-top: 9px;

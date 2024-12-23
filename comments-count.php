@@ -8,7 +8,7 @@ if ( is_front_page() && is_home() || is_home() ) :
 					printf(
 						/* translators: %s: post title */
 						esc_html_x( '1 Response to &ldquo;%s&rdquo;', 'comments title', 'appealing' ),
-						'<span>' . get_the_title() . '</span>'
+						'<span>' . esc_html( get_the_title() ) . '</span>'
 					);
 				} else { 
 					printf( 
@@ -20,8 +20,8 @@ if ( is_front_page() && is_home() || is_home() ) :
 							'comments title',
 							'appealing'
 						) ),
-						number_format_i18n( $comments_number ),
-						'<span>' . get_the_title() . '</span>'
+						number_format_i18n( esc_attr( $comments_number ) ),
+						'<span>' . esc_html( get_the_title() ) . '</span>'
 					);
 				}
 else : 
@@ -42,7 +42,7 @@ else :
 							'comments title',
 							'appealing'
 						) ),
-						number_format_i18n( $comments_number )
+							number_format_i18n( esc_attr( $comments_number ) )
 					);
 				}
 endif;
