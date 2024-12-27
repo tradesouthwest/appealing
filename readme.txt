@@ -3,7 +3,9 @@ Theme URI:      https://themes.tradesouthwest.com/appeal.php
 Theme Name:     Appeal
 Author:         Larry Judd Oliver
 Author URI:     https://tradesouthwest.com/
-Text Domain:    appeal
+Requires PHP:   7.4
+Requires CP:    1.4
+Text Domain:    appealing
 Tags:           one-column, two-columns, three-columns, translation-ready, footer-widgets, full-width-template
 License:        GPL 3
 License URI:    https://www.gnu.org/licenses/quick-guide-gplv3.en.html
