@@ -11,8 +11,7 @@
  */
 function appealing_theme_setup() {
     /**
-     * Not used in ClassicPress < 2.0
-     * to output valid HTML5.
+     * Not used in ClassicPress > 2.0 to output valid HTML5.
      */
     if ( function_exists( 'is_classicpress' ) && version_compare( '2.0', $cp_version, '<' ) ) {
         add_theme_support( 'html5',
