@@ -10,17 +10,21 @@
  * as indicating support for post thumbnails.
  */
 function appealing_theme_setup() {
-/**
- * Not used in ClassicPress < 2.0 
- * to output valid HTML5.
- */ /*
-    add_theme_support( 'html5', array(
-        'search-form',
-        'comment-form',
-        'comment-list',
-        'gallery',
-        'caption',
-    )); */
+    /**
+     * Not used in ClassicPress < 2.0
+     * to output valid HTML5.
+     */
+    if ( function_exists( 'is_classicpress' ) && version_compare( '2.0', $cp_version, '<' ) ) {
+        add_theme_support( 'html5',
+            array(
+                'search-form',
+                'comment-form',
+                'comment-list',
+                'gallery',
+                'caption',
+            )
+        );
+    }
 /**
  * Let WordPress manage the document title.
  * By adding theme support, we declare that this theme does not use a
@@ -102,6 +106,7 @@ function appealing_theme_setup() {
     add_theme_support( 'woocommerce' );
 }
 add_action('after_setup_theme','appealing_theme_setup');
+
 
 /**woo weady
  * Removes woo wrappers and replace with this theme's content
